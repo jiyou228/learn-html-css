@@ -1,0 +1,20 @@
+/* 본문의 기본 여백 설정 */
+body {
+  margin: 20px;
+  color: gray;
+}
+
+/* 상속 */
+.wrapper {
+  color: purple;
+  border: 1px solid green;
+}
+
+/* 겹침 */
+/* 요소는 1점 클래스 10점 */
+body a + h1 + div#coding.wrapper p.like {
+  color: blue;
+}
+#coding.wrapper p.like {
+  color: red;
+}
