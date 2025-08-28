@@ -4,12 +4,85 @@
 }
 
 /* 요소 선택자 */
+body {
+  margin: 20px;
+}
 a {
   text-decoration: none;
   color: red;
 }
 
+p {
+  border: 2px solid blue;
+}
+
 /* 클래스 선택자 */
 .like {
-  background-color: yellow;
+  background-color: var(--yellow);
+  border: 2px dashed green;
+}
+
+/* 아이디 선택자 (지양. 유지보수에 어려움이 생김. 다른 스타일로 재지정 어려움) */
+#lion {
+  background-color: var(--orange);
+}
+
+/* 속성 선택자 */
+a[href^='https'] {
+  color: green;
+}
+
+/* 자손 결합자 */
+.bootcamp p {
+  color: gray;
+}
+
+/* 자식 결합자 */
+.bootcamp > blockquote > p {
+  padding: 30px;
+}
+
+/* 선택자 그룹화 */
+a,
+h1,
+#lion {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* 가상 요소 선택자 */
+h1::before {
+  content: '멋사';
+}
+h1::after {
+  content: '15기';
+}
+
+p::first-letter {
+  font-size: 80px;
+  font-weight: 900;
+}
+p::selection {
+  background-color: darkblue;
+  color: white;
+}
+/* 가상 클래스 */
+h1:hover {
+  background-color: pink;
+}
+a:link {
+  color: purple;
+}
+a:visited {
+  color: gray;
+}
+h1:focus {
+  border: 2px dashed black;
+}
+a:focus {
+  outline: 2px solid red;
+  outline-offset: 10px;
+}
+
+.frontend p:first-child {
+  font-size: 16px;
 }
