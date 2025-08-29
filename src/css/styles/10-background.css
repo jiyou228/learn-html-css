@@ -1,0 +1,10 @@
+body {
+  margin: 20px;
+}
+
+/* 배경 스타일링 */
+body {
+  background-color: #ffc;
+  background-image: url('/src/assets/images/sun.png');
+  background-repeat: repeat-y;
+}
