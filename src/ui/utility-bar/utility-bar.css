@@ -1,0 +1,45 @@
+body {
+  margin: 20px;
+}
+
+/* 유틸리티 바 */
+/* .utility-bar {
+  background: yellow;
+  display: inline-block;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    padding: 8px;
+    text-transform: uppercase;
+  }
+
+  span {
+    padding: 8px;
+  }
+} */
+
+.utility-bar {
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 0;
+  /* agent style이 먹히기에 여기에 등록하면 적용이 안됨 */
+  /* 아래에 color 상속을 해서 가능하게 함. */
+  /* color: green; */
+
+  li {
+    display: inline-block;
+  }
+
+  a,
+  span {
+    /* 앞뒤 공백을 제거하기 위해 부모 폰트 0, 자식에게 주기 */
+    font-size: 1rem;
+    padding: 8px;
+    display: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+}
