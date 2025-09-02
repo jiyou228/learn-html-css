@@ -1,0 +1,59 @@
+body {
+  margin: 20px;
+}
+
+/* 컴포넌트 */
+/* .term {
+  background-color: #ffc;
+  display: flow-root;
+  width: 218px;
+
+  .subject {
+    font-size: 14px;
+    font-weight: 600;
+    color: #296897;
+    float: right;
+    width: 142px;
+    line-height: 150%;
+    margin-bottom: 4px;
+  }
+
+  .thumbnail {
+    float: left;
+    margin-right: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 150%;
+  }
+} */
+
+.term {
+  --accent-color: #296897;
+
+  display: flow-root;
+  font-size: 14px;
+  line-height: 150%;
+
+  .subject {
+    font-weight: 600;
+
+    color: var(--accent-color);
+  }
+
+  .subject,
+  .description {
+    float: right;
+    width: calc(100% - 76px);
+  }
+
+  .thumbnail {
+    float: left;
+    margin-right: 16px;
+  }
+
+  .description {
+    margin-top: 4px;
+  }
+}
