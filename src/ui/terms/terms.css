@@ -35,7 +35,6 @@ body {
 
   display: flow-root;
   font-size: var(--text-size);
-  line-height: 150%;
 
   .subject {
     font-weight: 600;
@@ -51,7 +50,6 @@ body {
 
   .thumbnail {
     float: left;
-    margin-right: 16px;
   }
 
   .description {
@@ -60,7 +58,6 @@ body {
   }
 }
 
-/* 레이아웃 */
 /* 레이아웃 */
 .terms {
   --gray-700: #7a7a7a;
@@ -72,6 +69,7 @@ body {
   border: 1px solid var(--gray-700);
   border-radius: 5px;
   padding: var(--spacing);
+  width: 250px;
 
   .headline {
     font-size: 1.4em;
@@ -83,15 +81,14 @@ body {
     margin-top: calc(var(--spacing) - 4px);
   }
 
-  & div:nth-child(3) {
-    background-color: pink;
+  /* 홀수번째, 짝수번째열만 even/ 2n + 1 */
+  & .term:nth-child(2n + 1) {
     .subject,
     .description {
       float: left;
     }
     .thumbnail {
       float: right;
-      margin-right: 0;
     }
   }
 }
