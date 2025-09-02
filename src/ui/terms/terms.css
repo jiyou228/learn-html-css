@@ -31,14 +31,15 @@ body {
 
 .term {
   --accent-color: #296897;
+  --text-size: 1rem;
 
   display: flow-root;
-  font-size: 14px;
+  font-size: var(--text-size);
   line-height: 150%;
 
   .subject {
     font-weight: 600;
-
+    font-size: 1.2em;
     color: var(--accent-color);
   }
 
@@ -55,5 +56,6 @@ body {
 
   .description {
     margin-top: 4px;
+    font-size: 1em;
   }
 }
