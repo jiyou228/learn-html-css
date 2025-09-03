@@ -1,0 +1,120 @@
+body {
+  margin: 20px;
+}
+
+/* 플렉스 컨테이너 관련 속성 */
+/* display:flex를 주면 like는 flex container가 되고 like-item은 flex item이 됨 */
+/* flex 기본은 row 방향 */
+.like {
+  background: #ffc;
+  box-shadow: 0 0 0 1px red;
+  inline-size: 1000px;
+  block-size: 100px;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  flex-flow: row nowrap;
+  /* 메인 축 정렬 */
+  justify-content: end;
+  /* 교차 축 정렬 */
+  align-items: center;
+
+  > div {
+    inline-size: 200px;
+    background-color: aqua;
+  }
+}
+
+/* 메인축 정렬은 justify-content */
+/* 교차축 정렬은 align-items */
+
+.lion {
+  background: #ffc;
+  box-shadow: 0 0 0 1px red;
+  inline-size: 500px;
+  block-size: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: end;
+  /* align-content가 우선됨. items-개별적 content-한덩어리 */
+  align-items: end;
+  align-content: end;
+
+  > div {
+    inline-size: 200px;
+    background-color: aqua;
+  }
+}
+
+/* 플렉스 아이템 관련 속성 */
+.bootcamp {
+  background: pink;
+  box-shadow: 0 0 0 1px blue;
+  inline-size: 400px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  > div {
+    inline-size: 125px;
+  }
+
+  .bootcamp-item1 {
+    background: skyblue;
+    order: 1;
+    flex-shrink: 1;
+  }
+
+  .bootcamp-item2 {
+    background: silver;
+    order: 1;
+    /* flex-shrink 기본 1배율, 2로 설정시 2배율 줄어듦 -> inline size가 넉넉하면 줄어들지 않음 */
+    flex-shrink: 2;
+  }
+
+  .bootcamp-item3 {
+    background: lime;
+    order: 1;
+    flex-shrink: 1;
+  }
+
+  .bootcamp-item4 {
+    background: salmon;
+    order: -1;
+    flex-shrink: 1;
+  }
+}
+
+.frontend {
+  background: pink;
+  box-shadow: 0 0 0 1px blue;
+  inline-size: 1000px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  > div {
+    /* inline-size: 125px; */
+    /* flex-basis : 컨텐츠 크기에 맞춰서 됨. auto와 0은 다름 (기본 0으로 설정하면 좋음) */
+    flex-basis: 0;
+  }
+
+  .frontend-item1 {
+    background: skyblue;
+    /* flex-grow의 기본값은 0 */
+    flex-grow: 1;
+  }
+
+  .frontend-item2 {
+    background: silver;
+    flex-grow: 0;
+  }
+
+  .frontend-item3 {
+    background: lime;
+    flex-grow: 0;
+  }
+
+  .frontend-item4 {
+    background: salmon;
+    flex-grow: 1;
+  }
+}
