@@ -1,0 +1,72 @@
+body {
+  margin: 20px;
+}
+
+/* 내가 한 실습 */
+/* .notification {
+  --black: #121212;
+  --green: #22be61;
+  --gray: #9b9a90;
+  --white: #fff;
+  width: 332px;
+  height: 84px;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--gray);
+  background: var(--white);
+  box-shadow: 0 0 2px 0 rgba(114, 119, 124, 0.2);
+
+  .notification-icon {
+    float: left;
+  }
+
+  .notification-content {
+    width: 100%;
+
+    strong {
+      color: var(--green);
+      font-size: 18px;
+    }
+
+    time {
+      float: right;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--gray);
+    }
+  }
+} */
+
+/* 실습 레이아웃 */
+.notification {
+  --black: #121212;
+  --green: #22be61;
+  --gray: #9b9a90;
+  --white: #fff;
+
+  background: #ffc;
+  border: 1px solid var(--gray);
+  /* option + Z : px to rem */
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .notification-icon {
+    box-shadow: 0 0 0 1px red;
+    flex: 0 0 auto;
+  }
+
+  .notification-content {
+    box-shadow: 0 0 0 1px blue;
+    flex: 1 1 0;
+  }
+}
