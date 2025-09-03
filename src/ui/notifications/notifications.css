@@ -52,21 +52,44 @@ body {
   --gray: #9b9a90;
   --white: #fff;
 
-  background: #ffc;
   border: 1px solid var(--gray);
   /* option + Z : px to rem */
   border-radius: 0.25rem;
   padding: 1.25rem;
   display: flex;
   flex-flow: row nowrap;
+  column-gap: 1.25rem;
+  align-items: center;
 
   .notification-icon {
-    box-shadow: 0 0 0 1px red;
     flex: 0 0 auto;
   }
 
   .notification-content {
-    box-shadow: 0 0 0 1px blue;
     flex: 1 1 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 4px;
+  }
+
+  strong {
+    /* flex-grow: 1; */
+    color: var(--green);
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  time {
+    /* margin-inline-start: auto; */
+    color: var(--green);
+    font-size: 0.6875rem;
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--gray);
+    font-size: 0.875rem;
+    inline-size: 100%;
   }
 }
