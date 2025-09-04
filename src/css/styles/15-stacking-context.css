@@ -1,0 +1,74 @@
+body {
+  margin: 20px;
+}
+
+h1 {
+  background: rgba(0, 255, 0, 1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Stacking Context */
+.likelion {
+  background: #ffc;
+  border: 1px solid currentColor;
+  block-size: 200px;
+  position: relative;
+  z-index: 3;
+
+  .bootcamp,
+  .frontend,
+  .euid {
+    border: inherit;
+    inline-size: 50px;
+    aspect-ratio: 1/1;
+  }
+
+  .bootcamp {
+    background: rgba(255, 0, 0, 1);
+    position: absolute; /* 제자리에서 떠 있음 */
+    inset-block-start: -20px;
+    inset-inline-start: 10px;
+    z-index: 1;
+  }
+
+  .frontend {
+    background: pink;
+    position: relative;
+    z-index: 3;
+  }
+
+  .euid {
+    background: skyblue;
+    position: absolute;
+    inset-block-start: -30px;
+    z-index: 2;
+  }
+}
+
+/* 얘시 레이아웃 */
+.cafe-w {
+  border: 10px solid currentColor;
+  inline-size: 500px;
+  block-size: 200px;
+  position: relative;
+  background-color: pink;
+  isolation: isolate;
+
+  .hero {
+    position: absolute;
+    inset: 0; /* 크기를 안주는 대신 다 끝쪽으로 */
+    z-index: -1; /* 배경보다 밑으로 내려감 */
+  }
+
+  .star {
+    background: #fff;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
+
+  .text {
+    background: yellow;
+    padding: 1em;
+  }
+}
