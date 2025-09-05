@@ -44,7 +44,6 @@ body {
 
 /* 입력 서식 */
 .input {
-  background: #ffc;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -59,6 +58,7 @@ body {
     border: 1px solid currentColor;
     border-radius: 4px;
     padding: 0.125em 0.5em;
+    min-inline-size: 0;
   }
 }
 
@@ -82,7 +82,6 @@ body {
 } */
 
 /* 버튼 */
-/* 버튼 */
 .circle-gradient {
   --size: 24px;
   --start-color: var(--green-200);
@@ -104,5 +103,93 @@ body {
     aspect-ratio: 1/1;
     background: var(--white);
     border-radius: inherit;
+  }
+}
+
+/* 검색바 실습 */
+/* .search-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 2px;
+  border: 1.5px solid var(--green-100);
+  padding: 10px 20px;
+  border-radius: 45px;
+  transition: box-shadow 0.2s ease;
+
+  &.search-bar:has(input:valid) {
+    box-shadow: 0 4px 10px var(--gray-200);
+  }
+
+  form {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+    width: 100%;
+
+    input {
+      border: none;
+    }
+  }
+} */
+
+/* 검색바 */
+.search-bar {
+  --border-color: var(--green-100);
+  --shadow-color: var(--gray-100);
+
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 12px 12px 12px 20px;
+  column-gap: 12px;
+
+  &:focus-within {
+    box-shadow: 0 5px 5px 0 var(--shadow-color);
+  }
+
+  .go-home {
+    flex: 0 0 auto;
+  }
+
+  form {
+    display: contents;
+  }
+
+  .input {
+    margin-inline-end: 4px;
+    flex: 1 1 0;
+  }
+
+  input {
+    inline-size: 100%;
+    border: 0 none;
+    background: none;
+    appearance: none;
+    outline: 0;
+  }
+  /* X 버튼은 Safari, Chrome, Edge, Opera 등 webkit 및 blink 엔진을 사용하는 웹브라우저의 기본 스타일 */
+  /* X 버튼을 제거하고 싶다면 :-webkit-search-cancel-button 선택자를 사용하여 display 속성 값을 none으로 지정 */
+  [type='search']::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  butoon {
+    flex: 0 0 auto;
   }
 }
