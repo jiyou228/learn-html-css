@@ -139,7 +139,6 @@ body {
 .input {
   --size: 72px;
 
-  background: yellow;
   block-size: var(--size);
   display: inline-flex;
   flex-flow: row wrap;
