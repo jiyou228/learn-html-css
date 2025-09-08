@@ -49,3 +49,34 @@ body {
     background: var(--green-300);
   }
 }
+
+/* 체크박스 컴포넌트 */
+/* 현업에서 사용하는 가장 많은 방식 */
+.checkbox {
+  --size: 24px;
+  &.bg-icon {
+    position: relative;
+    input {
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      margin: 0;
+      inline-size: var(--size);
+      block-size: var(--size);
+      appearance: none;
+    }
+    label {
+      block-size: var(--size);
+      display: inline-flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      padding-inline: calc(var(--size) + 4px);
+      /* contain을 쓰면 자동으로 줄어들음 cover는 크게 */
+      background: url(/src/assets/naver/unchecked.svg) no-repeat 0 0;
+    }
+
+    input:checked + label {
+      background-image: url(/src/assets/naver/checked.svg);
+    }
+  }
+}
