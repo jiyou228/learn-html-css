@@ -5,6 +5,7 @@
   --green-300: #03cca8;
 
   --blue-100: #e9f0fd;
+  --red-100: #ff1414;
 
   --gray-100: #bcc3c7;
   --gray-200: #9b9a90;
@@ -109,4 +110,60 @@ body {
 /* 링크 텍스트 */
 .textlink-new {
   font-weight: 700;
+}
+
+/* 스위치 */
+.switch {
+  position: relative;
+  display: inline-flex;
+
+  input {
+    position: absolute;
+    margin: 0;
+    inset: 0;
+    appearance: none;
+  }
+
+  label::after {
+    content: 'OFF';
+    color: var(--gray-200);
+  }
+
+  input:checked + label::after {
+    content: 'ON';
+    color: var(--green-100);
+  }
+}
+
+/* 입력서식 */
+.input {
+  --size: 72px;
+
+  background: yellow;
+  block-size: var(--size);
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+
+  input {
+    inline-size: 100%;
+    block-size: 48px;
+    border: 1px solid var(--gray-200);
+    padding-inline-start: 0.5em;
+
+    &:read-only {
+      background: var(--gray-100);
+    }
+  }
+
+  .error-message {
+    color: var(--red-100);
+    font-size: 0.625rem;
+    background: pink;
+    visibility: hidden;
+  }
+
+  input:user-invaild + .error-message {
+    visibility: visible;
+  }
 }
