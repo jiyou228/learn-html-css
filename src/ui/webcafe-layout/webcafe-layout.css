@@ -1,0 +1,91 @@
+.container {
+  background: silver;
+  min-block-size: 100vh;
+
+  .header {
+    background: yellow;
+  }
+
+  .main {
+    background: gray;
+  }
+
+  .book {
+    background: pink;
+  }
+  .news {
+    background: lightgreen;
+  }
+  .board {
+    background: salmon;
+  }
+  .favorite {
+    background: teal;
+  }
+  .twitter {
+    background: aqua;
+  }
+
+  .footer {
+    background: yellow;
+  }
+}
+
+/* 컨테이너 */
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* 헤더 & 푸터 */
+.header,
+.footer {
+  block-size: 100px;
+  flex: 0 1 auto;
+}
+
+.header {
+}
+
+.main {
+  flex: 1 1 0;
+  display: flex;
+  flex-flow: row wrap;
+
+  > div {
+    inline-size: 100%;
+  }
+
+  @media (width >= 960px) {
+    column-gap: 20px;
+
+    .main-wrapper-1,
+    .main-wrapper-2 {
+      display: flex;
+      flex-flow: row nowrap;
+      inline-size: 100%;
+      column-gap: 20px;
+    }
+
+    .book {
+      flex: 3 1 0;
+    }
+
+    .news {
+      flex: 7 1 0;
+    }
+    .board {
+      flex: 3 1 0;
+    }
+    .favorite {
+      flex: 5 1 0;
+      order: 1;
+    }
+    .twitter {
+      flex: 2 1 0;
+    }
+  }
+}
+
+.footer {
+}
