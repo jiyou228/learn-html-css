@@ -35,6 +35,15 @@
 .container {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
+}
+
+/* 헤더 & 메인 & 푸터 */
+.header,
+.main,
+.footer {
+  max-inline-size: 1200px;
+  inline-size: 100%;
 }
 
 /* 헤더 & 푸터 */
@@ -52,37 +61,32 @@
   display: flex;
   flex-flow: row wrap;
 
-  > div {
+  .book,
+  .news,
+  .board,
+  .favorite,
+  .twitter {
     inline-size: 100%;
   }
 
   @media (width >= 960px) {
-    column-gap: 20px;
-
-    .main-wrapper-1,
-    .main-wrapper-2 {
-      display: flex;
-      flex-flow: row nowrap;
-      inline-size: 100%;
-      column-gap: 20px;
-    }
-
     .book {
-      flex: 3 1 0;
+      inline-size: 35%;
+      padding-inline-end: 10px;
     }
 
     .news {
-      flex: 7 1 0;
+      inline-size: 65%;
     }
     .board {
-      flex: 3 1 0;
+      inline-size: 35%;
     }
     .favorite {
-      flex: 5 1 0;
+      inline-size: 20%;
       order: 1;
     }
     .twitter {
-      flex: 2 1 0;
+      inline-size: 45%;
     }
   }
 }
