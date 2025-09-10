@@ -1,3 +1,53 @@
+:root {
+  --white: #fff;
+  --blue-100: #3030e0;
+  --blue-200: #111166;
+
+  --text-color: var(--white);
+  --start-color: var(--blue-100);
+  --end-color: var(--blue-200);
+}
+
 body {
   margin: 20px;
+}
+
+.news {
+  color: var(--white);
+  background: var(--blue-200);
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) max-content;
+  grid-auto-rows: auto; /* 아예 생략 가능 */
+  padding: 1em;
+  gap: 8px;
+
+  .news-title,
+  a,
+  time {
+    padding: 0.5em;
+  }
+
+  .news-list,
+  .news-item {
+    display: contents;
+  }
+
+  /* .news-title,
+  .more {
+    order: -1;
+  } */
+
+  a:not(.more) {
+    /* background: pink; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 말 줄임표를 사용할 때 위 3개가 같이 쓰여야 함. (말 줄임표는 한줄만 가능) */
+    /* 여러 줄일 때는 line-clamp */
+  }
+
+  .more {
+    grid-area: 1 / 2;
+    justify-self: end;
+  }
 }
