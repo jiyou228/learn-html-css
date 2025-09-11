@@ -1,1 +1,98 @@
 /* 메인 페이지 스타일 */
+/* 전체 레이아웃 */
+body {
+  font-family: 'SUIT Variable', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa, #e6e9f0);
+  color: #121212;
+}
+
+/* 제목 */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  color: #24388d;
+}
+
+/* 섹션 컨테이너 */
+.section-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* 섹션별 카드 */
+.section-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 소제목 */
+.section-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #24388d;
+  border-left: 4px solid #24388d;
+  padding-left: 0.5rem;
+}
+
+/* 링크 목록 */
+/* 리스트를 2열 그리드로 */
+.section-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem; /* 항목 간격 */
+}
+
+/* 링크 버튼 */
+.section-card a {
+  display: block;
+  text-decoration: none;
+  text-align: center; /* 가운데 정렬 */
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f5f7ff;
+  color: #24388d;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    transform 0.2s;
+  white-space: nowrap; /* 줄바꿈 방지 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 긴 텍스트는 ... 처리 */
+}
+
+.section-card a:hover {
+  background: #24388d;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  .section-card h2 {
+    font-size: 1.2rem;
+  }
+}
